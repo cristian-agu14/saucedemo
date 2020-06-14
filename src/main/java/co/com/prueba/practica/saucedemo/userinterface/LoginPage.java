@@ -11,4 +11,7 @@ public class LoginPage {
 	public static final Target CAMPO_TEXTO_PASSWORD = Target.the("Campo de texto para ingresar la contrasenia")
 			.located(By.id("password"));
 
+	public static final Target BOTON_LOGIN = Target.the("Boton para iniciar sesion")
+			.located(By.className("btn_action"));
+
 }

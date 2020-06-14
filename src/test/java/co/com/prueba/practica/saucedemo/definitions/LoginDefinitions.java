@@ -1,5 +1,6 @@
 package co.com.prueba.practica.saucedemo.definitions;
 
+import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;
 import static net.serenitybdd.screenplay.actors.OnStage.theActorCalled;
 import static net.serenitybdd.screenplay.actors.OnStage.theActorInTheSpotlight;
 
@@ -7,8 +8,9 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
 
+import co.com.prueba.practica.saucedemo.questions.ElUsuarioEsta;
+import co.com.prueba.practica.saucedemo.tasks.LoginOn;
 import co.com.prueba.practica.saucedemo.utils.WebDriverFactory;
 import cucumber.api.java.Before;
 import cucumber.api.java.ast.Cuando;
@@ -38,12 +40,12 @@ public class LoginDefinitions {
 
 	@Cuando("se ingresan las credenciales correctas")
 	public void seIngresanLasCredencialesCorrectas() {
-		
+		theActorInTheSpotlight().attemptsTo(LoginOn.page());
 	}
 
 	@Entonces("se observa el ingreso al aplicativo swaglabs")
 	public void seObservaElIngresoAElAplicativoSwaglabs() {
-
+		theActorInTheSpotlight().should(seeThat(ElUsuarioEsta.logueado()));
 	}
 
 }
