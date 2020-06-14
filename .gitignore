@@ -1,0 +1,11 @@
+# built application files
+*.txt
+*.xlsx
+# file
+#directory
+.idea/
+target/
+src/test/resources/drivers
+.classpath
+.project
+.settings/
