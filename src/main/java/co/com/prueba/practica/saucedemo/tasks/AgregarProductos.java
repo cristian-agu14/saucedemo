@@ -11,6 +11,12 @@ import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.Tasks;
 
+/**
+ * Tarea que agrega los productos al carrito
+ * 
+ * @author Cristian
+ *
+ */
 public class AgregarProductos implements Task {
 
 	private List<String> listaProductos;
@@ -23,6 +29,10 @@ public class AgregarProductos implements Task {
 		this.listaProductos = listaProductos;
 	}
 
+	/**
+	 * Este metodo utiliza lambda de java 8 para agregar cada uno de los producto y
+	 * ademas acomular el valor total
+	 */
 	@Override
 	public <T extends Actor> void performAs(T actor) {
 		actor.remember(TAMANIO_PRODUCTOS, listaProductos.size());

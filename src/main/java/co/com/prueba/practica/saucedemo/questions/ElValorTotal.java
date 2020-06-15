@@ -5,6 +5,14 @@ import net.serenitybdd.screenplay.Question;
 import static co.com.prueba.practica.saucedemo.userinterface.ResumenCompraPage.TEXTO_ITEM_TOTAL;
 import static co.com.prueba.practica.saucedemo.utils.VariablesRemember.PRECIO_TOTAL;
 
+/**
+ * Esta Question evalua si el valor total de los productos comprados el cual se
+ * muestra en pantalla sea el correcto, esto se hace recordando el valor
+ * acomulado anteriormente
+ * 
+ * @author Cristian
+ *
+ */
 public class ElValorTotal implements Question<Boolean> {
 
 	@Override

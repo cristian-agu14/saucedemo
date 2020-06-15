@@ -2,6 +2,12 @@ package co.com.prueba.practica.saucedemo.userinterface;
 
 import net.serenitybdd.screenplay.targets.Target;
 
+/**
+ * Clase para los elementos de la pagina del resumen de la compra
+ * 
+ * @author Cristian
+ *
+ */
 public class ResumenCompraPage {
 
 	public static final Target TEXTO_ITEM_TOTAL = Target

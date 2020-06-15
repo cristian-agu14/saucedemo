@@ -2,6 +2,12 @@ package co.com.prueba.practica.saucedemo.userinterface;
 
 import net.serenitybdd.screenplay.targets.Target;
 
+/**
+ * Clase para los elementos de la pagina de los productos
+ * 
+ * @author Cristian
+ *
+ */
 public class ProductosPage {
 
 	public static final Target TEXTO_PRODUCTS = Target.the("Texto products que existe cuando el usuario se ha logueado")

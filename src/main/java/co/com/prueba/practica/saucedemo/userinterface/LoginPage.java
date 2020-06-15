@@ -3,6 +3,12 @@ package co.com.prueba.practica.saucedemo.userinterface;
 import net.serenitybdd.core.annotations.findby.By;
 import net.serenitybdd.screenplay.targets.Target;
 
+/**
+ * Clase para los elementos de la pagina del login
+ * 
+ * @author Cristian
+ *
+ */
 public class LoginPage {
 
 	public static final Target CAMPO_TEXTO_USER_NAME = Target.the("Campo de texto para ingresar el nombre de usuario")

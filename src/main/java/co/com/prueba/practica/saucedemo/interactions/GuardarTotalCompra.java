@@ -19,6 +19,10 @@ public class GuardarTotalCompra implements Interaction {
 		this.nombreProducto = nombreProducto;
 	}
 
+	/**
+	 * Esta interaccion hace que el actor recuerde cada uno de los precios de cada
+	 * prenda y los acomule en un total
+	 */
 	@Override
 	public <T extends Actor> void performAs(T actor) {
 		Double precio = actor.recall(PRECIO_TOTAL);

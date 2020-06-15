@@ -8,7 +8,7 @@ Característica: Funcionalidad para ver y agregar productos al carrito para su p
     Cuando se ingresan las credenciales correctas
     Entonces se observa el ingreso al aplicativo swaglabs
 
-  @login-exitoso
+  @comprar-productos
   Esquema del escenario: Como analista de certificacion deseo validar la funcionalidad de agregar productos al carrito y su respectiva compra
     Dado que  el Analista agrega los siguientes productos al carrito
       | Sauce Labs Backpack | Sauce Labs Bolt T-Shirt | Sauce Labs Fleece Jacket | Producto no existente |

@@ -4,6 +4,13 @@ import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Question;
 import static co.com.prueba.practica.saucedemo.userinterface.FinishPage.TEXTO_FINAL;
 
+/**
+ * Esta question obtiene el texto generado despuesde realizar la compra y lo
+ * retorna para poder ser evaluado con un Matcher
+ * 
+ * @author Cristian
+ *
+ */
 public class ElMensajeEs implements Question<String> {
 
 	@Override

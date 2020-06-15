@@ -10,6 +10,13 @@ import static co.com.prueba.practica.saucedemo.userinterface.CheckoutPage.CAMPO_
 import static co.com.prueba.practica.saucedemo.userinterface.CheckoutPage.CAMPO_TEXT_CODIGO_POSTAL;
 import static co.com.prueba.practica.saucedemo.userinterface.CheckoutPage.BOTON_CONTINUE;
 
+/**
+ * Esta tarea tiene como objetivo llenar el formulario de la persona que hace la
+ * compra, los datos antran a la tarea por el constructor
+ * 
+ * @author Cristian
+ *
+ */
 public class IngresarInfo implements Task {
 
 	private String nombre;

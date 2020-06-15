@@ -3,7 +3,11 @@ package co.com.prueba.practica.saucedemo.userinterface;
 import org.openqa.selenium.By;
 
 import net.serenitybdd.screenplay.targets.Target;
-
+/**
+ * Clase para los elementos de la pagina de Checkout
+ * @author Cristian
+ *
+ */
 public class CheckoutPage {
 
 	public static final Target CAMPO_TEXT_NOMBRE = Target.the("Compo de texto para el nombre")

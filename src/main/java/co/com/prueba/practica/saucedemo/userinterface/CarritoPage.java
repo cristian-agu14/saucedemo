@@ -2,6 +2,12 @@ package co.com.prueba.practica.saucedemo.userinterface;
 
 import net.serenitybdd.screenplay.targets.Target;
 
+/**
+ * Clase para los elemento de la pagina del carrito
+ * 
+ * @author Cristian
+ *
+ */
 public class CarritoPage {
 
 	public static final Target NOMBRE_PRODUCTO = Target.the("Target para insertar el nombre del producto")

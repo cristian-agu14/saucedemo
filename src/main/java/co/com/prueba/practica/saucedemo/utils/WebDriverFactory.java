@@ -19,6 +19,12 @@ import org.openqa.selenium.ie.InternetExplorerOptions;
 import org.openqa.selenium.remote.CapabilityType;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
+/**
+ * Esta clase es una clase factory para levantar un navegador
+ * 
+ * @author cristian
+ *
+ */
 public class WebDriverFactory {
 
 	private static WebDriver driver;
@@ -32,6 +38,11 @@ public class WebDriverFactory {
 
 	}
 
+	/**
+	 * Metodo para obtener el driver necesario
+	 * 
+	 * @return WebDriver
+	 */
 	public static WebDriver getDriver() {
 		String webdriverstr = System.getProperty("serenity.driver.name");
 		if (webdriverstr == null) {
@@ -51,7 +62,7 @@ public class WebDriverFactory {
 			ChromeOptions chropts = new ChromeOptions();
 			chropts.setAcceptInsecureCerts(true);
 			return new ChromeDriver();
-			
+
 		case "edge":
 			System.setProperty("webdriver.edge.driver", "resources/drivers/MicrosoftWebDriver.exe");
 			DesiredCapabilities capabilities = DesiredCapabilities.edge();
@@ -86,6 +97,15 @@ public class WebDriverFactory {
 		}
 	}
 
+	/**
+	 * Metodo que puede abrir la pagina que se le envie
+	 * 
+	 * @param url
+	 *            para abrir en el navegador
+	 * @return driver actua
+	 * @throws FileNotFoundException
+	 * @throws IOException
+	 */
 	public WebDriver onPage(String url) throws FileNotFoundException, IOException {
 		Properties properties = new Properties();
 		properties.load(new FileReader("resources/urls/urls.properties"));
@@ -95,6 +115,13 @@ public class WebDriverFactory {
 		return driver;
 	}
 
+	/**
+	 * Metodo para obtener una url de un archivo .properties
+	 * 
+	 * @param parametro
+	 *            nombre asignado en al archivo .properties para traer el valor
+	 * @return el valor de la propiedad, en este caso una url
+	 */
 	public String consultar_propertie(String parametro) {
 		Properties prop = new Properties();
 		InputStream is = null;

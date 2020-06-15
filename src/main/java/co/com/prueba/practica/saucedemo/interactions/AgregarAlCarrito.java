@@ -20,6 +20,10 @@ public class AgregarAlCarrito implements Interaction {
 		this.nombreProducto = nombreProducto;
 	}
 
+	/**
+	 * Esta interaccion verifica que el producto que le entra por el construtor
+	 * exista y si es asi le da click al botton agregar
+	 */
 	@Override
 	public <T extends Actor> void performAs(T actor) {
 

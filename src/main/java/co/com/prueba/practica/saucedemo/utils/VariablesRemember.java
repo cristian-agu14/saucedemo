@@ -1,5 +1,12 @@
 package co.com.prueba.practica.saucedemo.utils;
 
+/**
+ * Clase para almacenar varibles finales las cuales se utilizan para que el
+ * actor recuerde informacion
+ * 
+ * @author Cristian
+ *
+ */
 public class VariablesRemember {
 
 	public static final String CONT_PRODUCTOS = "contProductosAgregados";
