@@ -14,4 +14,10 @@ public class ProductosPage {
 	public static final Target NUM_CARRITO = Target.the("Numero de productos en el carrito")
 			.locatedBy("//span[@class='fa-layers-counter shopping_cart_badge']");
 
+	public static final Target BOTON_CARRITO = Target.the("Boton para entrar al carrito")
+			.locatedBy("//a[@class='shopping_cart_link fa-layers fa-fw']");
+
+	public static final Target PRECIO_PRODUCTO = Target.the("Precio del producto dependiendo del nombre").locatedBy(
+			"((//div[@class='inventory_item_name' and contains(text(),'{0}')]//ancestor::div[1])[1]//following::div[@class='inventory_item_price'])[1]");
+
 }

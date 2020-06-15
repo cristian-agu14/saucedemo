@@ -13,9 +13,11 @@ Característica: Funcionalidad para ver y agregar productos al carrito para su p
     Dado que  el Analista agrega los siguientes productos al carrito
       | Sauce Labs Backpack | Sauce Labs Bolt T-Shirt | Sauce Labs Fleece Jacket | Producto no existente |
     Cuando se valida que el contador del carrito sea correcto
-    Cuando se ingresa al carrito de compra se ven los productos seleccionados anteriormente
-    Cuando se realiza el checkout con nombre<nombre> apellido<apellido> y codigo postal<codigoPostal>
+    Y se ingresa al carrito de compra se ven los productos seleccionados anteriormente
+    Y se realiza el checkout con nombre<nombre> apellido<apellido> y codigo postal<codigoPostal>
+    Entonces se valida el valor de la compra
+    Y se valida el mensaje<mensaje>
 
     Ejemplos: 
-      | nombre   | apellido | codigoPstal |
-      | Cristian | Agudelo  |      050005 |
+      | nombre   | apellido | codigoPostal | mensaje                  |
+      | Cristian | Agudelo  |       050005 | THANK YOU FOR YOUR ORDER |
