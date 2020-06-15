@@ -6,6 +6,7 @@ import co.com.prueba.practica.saucedemo.interactions.AgregarAlCarrito;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.Tasks;
+import static co.com.prueba.practica.saucedemo.utils.VariablesRemember.TAMANIO_PRODUCTOS;
 
 public class AgregarProductos implements Task {
 
@@ -21,6 +22,7 @@ public class AgregarProductos implements Task {
 
 	@Override
 	public <T extends Actor> void performAs(T actor) {
+		actor.remember(TAMANIO_PRODUCTOS, listaProductos.size());
 		listaProductos.forEach(p -> actor.attemptsTo(AgregarAlCarrito.porElNombre(p)));
 	}
 

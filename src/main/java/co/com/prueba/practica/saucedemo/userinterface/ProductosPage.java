@@ -11,4 +11,7 @@ public class ProductosPage {
 			.the("Boton para agregar productos al carrito con respecto al nombre del producto").locatedBy(
 					"((//div[@class='inventory_item_name' and contains(text(),'{0}')]//ancestor::div[1])[1]//following::div//button)[1]");
 
+	public static final Target NUM_CARRITO = Target.the("Numero de productos en el carrito")
+			.locatedBy("//span[@class='fa-layers-counter shopping_cart_badge']");
+
 }

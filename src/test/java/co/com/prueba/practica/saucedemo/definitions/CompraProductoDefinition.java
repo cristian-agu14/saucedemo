@@ -2,10 +2,12 @@ package co.com.prueba.practica.saucedemo.definitions;
 
 import java.util.List;
 
+import co.com.prueba.practica.saucedemo.questions.ElNumeroDelCarritoEs;
 import co.com.prueba.practica.saucedemo.tasks.AgregarProductos;
 import cucumber.api.java.ast.Cuando;
 import cucumber.api.java.es.Dado;
 import static net.serenitybdd.screenplay.actors.OnStage.theActorInTheSpotlight;
+import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;
 
 public class CompraProductoDefinition {
 
@@ -16,7 +18,7 @@ public class CompraProductoDefinition {
 
 	@Cuando("se valida que el contador del carrito sea correcto")
 	public void seValidaQueElContadorDelCarritoSeaCorrecto() {
-
+		theActorInTheSpotlight().should(seeThat(ElNumeroDelCarritoEs.igualALaCantidadProductos()));
 	}
 
 	@Cuando("se ingresa al carrito de compra se ven los productos seleccionados anteriormente")
@@ -24,8 +26,9 @@ public class CompraProductoDefinition {
 
 	}
 
-	@Cuando("se realiza el checkout con nombreCristian apellidoAgudelo y codigo postal<codigoPostal>")
-	public void seRealizaElCheckoutConNombreCristianApellidoAgudeloYCodigoPostalCodigoPostal() {
+	@Cuando("se realiza el checkout con nombre(.*) apellido(.*) y codigo postal(.*)")
+	public void seRealizaElCheckoutConNombreCristianApellidoAgudeloYCodigoPostalCodigoPostal(String nombre,
+			String apellido, String codigoPostal) {
 
 	}
 
